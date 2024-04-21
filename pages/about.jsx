@@ -48,36 +48,17 @@ export default function About() {
           <div className=" text-[0.92rem] text-base mx-12 font-light dark:text-white text-gray-900">
             <p className="mt-6 mb-12 font-normal">
               Full Stack Developer who develops modern, reactive, and
-              user-friendly web applications using the latest technologies.{" "}
-              <span className="inline-flex items-baseline">
-                <Image
-                  src={Rocket}
-                  alt="rocket"
-                  className="self-center w-5 h-5 mx-1"
-                />
-              </span>{" "}
+              user-friendly web applications using the latest technologies.🚀
               Believe a perfect blend of UI architecture is one, where the goals
               and needs are accounted for in an elegant, efficient, and robust
               design of the user interface{" "}
-              <span className="inline-flex items-baseline">
-                <Image
-                  src={Sparkles}
-                  alt="rocket"
-                  className="self-center w-5 h-5 mx-1"
-                />
-              </span>{" "}
+              ✨
               Experience in React.js, Next.js, and state management like
               Redux.js with proficiency in web technologies like JavaScript,
               Typescript, Tailwind CSS. building large-scale web
               applications, cross-browser platforms, and design constraints on
               the web, and building responsive user interfaces.{" "}
-              <span className="inline-flex items-baseline">
-                <Image
-                  src={Flash}
-                  alt="rocket"
-                  className="self-center w-5 h-5 mx-1"
-                />
-              </span>{" "}
+              🔦
             </p>
 
             <p className="text-gray-400 select-none font-semibold mb-1 dark:text-white/30 ">
