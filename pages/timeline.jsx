@@ -19,7 +19,7 @@ const Timeline = () => {
             Timeline
           </h2>
           <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm md:text-base lg:text-xl mb-2 px-2">
-            Here's the timeline of my little journey. You can always find more information on LinkedIn.
+            Here is the timeline of my little journey. You can always find more information on LinkedIn.
           </p>
           <div className="select-none flex justify-center space-x-4 items-center mt-2 text-gray-400">
             <svg

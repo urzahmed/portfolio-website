@@ -50,7 +50,7 @@ export default function Home() {
           </div>
           <div className="mt-12 text-base md:text-xl lg:text-xl xl:text-xl 2xl:text-xl">
             <p className="sm:leading-6 md:leading-6 lg:leading-8">
-              I'm a Full Stack Web Developer with hands on designing, developing and implementing applications and solutions using a range of technologies and programming languages.
+              I am a Full Stack Web Developer with hands on designing, developing and implementing applications and solutions using a range of technologies and programming languages.
             </p>
           </div>
           <div className="flex space-x-2 justify-end">

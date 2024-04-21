@@ -13,7 +13,7 @@ const Contact = () => {
       text.innerHTML = text.innerHTML
         .split('')
         .map((character, index) => (
-          <span className="absolute origin-[0.3rem_5rem]" style={{ transform: `rotate(${index * 12}deg)` }}>
+          <span key={index} className="absolute origin-[0.3rem_5rem]" style={{ transform: `rotate(${index * 12}deg)` }}>
             {character}
           </span>
         ));
