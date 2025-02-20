@@ -1,50 +1,31 @@
-import { useEffect } from "react";
-
-import { useTheme } from "next-themes";
-import Head from "next/head";
-import Image from "next/image";
-
-import CategoryCard from "@/components/CategoryCard";
-
-import Flash from "@/public/Flash.svg";
-import Rocket from "@/public/Rocket.svg";
-import Sparkles from "@/public/Sparkles.svg";
-
-import urzprofile from "@/public/urzprofile.png"
-
+"use client"
 export default function About() {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <div className="px-10 sm:px-20 md:px-32 lg:mb-12 lg:px-60 mx-auto max-w-[75rem]">
-      <Head>
-        <title>About ⏔ Urooj</title>
-        <link rel="icon" href="/profile.png" />
-      </Head>
       <main className="  max-w-screen ">
         <div className=" mx-auto pt-16 -pb-10 max-w-7xl">
           <div className=" mx-auto flex flex-col ">
             <h1
-              className={`mt-6 mb-12 bg-gradient-to-br to-blue-700 via-cyan-500/90 from-yellow-600  bg-clip-text text-transparent selection:text-gray-700 dark:selection:text-white/90 items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold`}
+              className={`mb-12 bg-gradient-to-br to-blue-700 via-cyan-500/90 from-yellow-600  bg-clip-text text-transparent selection:text-gray-700 dark:selection:text-white/90 items-center mx-auto text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold`}
             >
               About
             </h1>
             <div className="mx-auto transition-all duration-1000 ease-in-out -mt-8">
-              <Image
+              {/* <Image
                 src={urzprofile}
                 height={800}
                 width={800}
                 className="select-none h-40 w-40 rounded-full"
                 alt="urooj ahmad"
                 priority
-              />
+              /> */}
             </div>
             <p className="mt-8 max-w-xl text-center md:w-[70%] mx-auto text-sm md:text-base lg:text-xl mb-2 px-2">
               Open Source Contributor | CSE Undergrad@HIT
             </p>
           </div>
-          <CategoryCard />
+          {/* <CategoryCard /> */}
           <div className=" text-[0.92rem] text-base mx-12 font-light dark:text-white text-gray-900">
             <p className="mt-6 mb-12 font-normal">
               Full Stack Developer who develops modern, reactive, and

@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-const TechCard = (props) => {
+interface TechCardProps {
+  changeId: (id: string) => void;
+  id: string;
+  main: string;
+  alt: string;
+}
+
+const TechCard = (props: TechCardProps) => {
   return (
     <div
       className="tech group relative dark:bg-white/25 lg:bg-none lg:dark:hover:bg-slate-50/50  h-10 w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 tech rounded-md sm:rounded-lg md:rounded-xl "

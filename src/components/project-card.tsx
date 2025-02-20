@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import istehit from "@/public/work/istehit.png"
-import socialutopia from "@/public/work/social-utopia.png"
-import krishiSaarthi from "@/public/work/krishi-saarthi.png"
-import summarEdge from "@/public/work/summar-edge.png"
-import todolist from "@/public/work/todo-list.png"
+import istehit from "../assets/work/istehit.png"
+import socialutopia from "../assets/work/social-utopia.png"
+import krishiSaarthi from "../assets/work/krishi-saarthi.png"
+import summarEdge from "../assets/work/summar-edge.png"
+import todolist from "../assets/work/todo-list.png"
 const ProjectCard = () => {
   const data = [
     {
@@ -55,7 +55,7 @@ const ProjectCard = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {data.map((project) => {
         return (
           <div key={project.id} className="m-1 p-1 border border-gray-400 rounded-lg shadow-md">

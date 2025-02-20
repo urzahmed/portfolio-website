@@ -1,10 +1,10 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
+import BackgroundCircles from "./background-circles";
 
 
 export default function Hero() {
-    const [text, count] = useTypewriter({
+    const [text] = useTypewriter({
         words: [
             "I like riding my 🚲",
             "I_like_to_code 🧑‍💻",

@@ -1,43 +1,42 @@
-/* eslint-disable @next/next/no-img-element */
+"use client"
 import { useState, useEffect, useRef } from "react";
 
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-import urooj_header_black from "@/public/urooj-header-black.svg";
-import urooj_header_white from "@/public/urooj-header-white.svg";
+import urooj_header_black from "../assets/urooj-header-black.svg";
+import urooj_header_white from "../assets/urooj-header-white.svg";
 
 const Header = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const router = useRouter().asPath;
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
-  let Links = [
-    { name: "work", link: "/work" },
-    { name: "skills", link: "/skills" },
+  const Links = [
+    { name: "blogs", link: "/blogs" },
     { name: "about", link: "/about" },
-    { name: "timeline", link: "/timeline" },
+    { name: "timeline", link: "/highlights" },
   ];
   const [isScrolled, setIsScrolled] = useState(false);
-  let [open, setOpen] = useState(false);
-  const touchRef = useRef();
-  const clickHandler = (link) => {
-    if (router != link) {
+  const [open, setOpen] = useState(false);
+  const touchRef = useRef<HTMLDivElement | null>(null);
+  const clickHandler = (link: string) => {
+    if (pathname != link) {
       setTimeout(() => {
         setOpen(false);
       }, 700);
     }
   };
-  const useOutsideAlerter = (ref) => {
+  const useOutsideAlerter = (ref: React.RefObject<HTMLDivElement | null>) => {
     useEffect(() => {
       /**
        * Alert if clicked on outside of element
        */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
+      function handleClickOutside(event: MouseEvent) {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
           setOpen(false);
         }
       }
@@ -139,18 +138,13 @@ const Header = () => {
                 href={link.link}
                 onClick={() => clickHandler(`${link.name}`)}
                 className={`${
-                  router === link.link
+                  pathname === link.link
                     ? " underline-purple-400 font-out"
                     : " text-gray-700 dark:text-white font-out"
                 } hover:text-purple-500 dark:hover:text-purple-500 duration-500`}
               >
                 <span>
                   {link.name}
-                  {link.name === "timeline" && (
-                    <sup className="font-semibold text-[8px] border-sky-100 rounded bg-blue-600 px-1 text-white">
-                      @
-                    </sup>
-                  )}
                 </span>
               </Link>
             </li>
