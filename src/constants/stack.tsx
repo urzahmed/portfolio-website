@@ -1,30 +1,20 @@
 import { BiLogoPostgresql } from "react-icons/bi";
-import { BsFillBootstrapFill, BsRobot } from "react-icons/bs";
+import { DiDocker } from "react-icons/di";
+import { FaAws, FaJava } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import {
-  SiCss3,
   SiExpress,
-  SiFirebase,
   SiJavascript,
   SiNextdotjs,
-  SiNginx,
   SiNodedotjs,
   SiPrisma,
   SiReact,
   SiTailwindcss,
-  SiTypescript,
   // new icons
-  SiKeras,
-  SiTensorflow,
-  SiCplusplus,
-  SiBun,
-  SiC,
-  SiPython,
-  SiSolidity,
-  SiHtml5,
-  SiFlask,
-  SiArchlinux,
   SiMongodb,
+  SiSpringboot,
+  SiApachemaven,
+  SiHibernate,
 } from "react-icons/si";
 
 export type stacksProps = Record<
@@ -37,31 +27,23 @@ export type stacksProps = Record<
 
 export const FRONTEND_STACKS: stacksProps = {
   JavaScript: { Icon: SiJavascript, className: "text-yellow-400" },
-  TypeScript: { Icon: SiTypescript, className: "text-blue-400" },
   "Next.js": { Icon: SiNextdotjs, className: "" },
   "React.js": { Icon: SiReact, className: "text-sky-500" },
   TailwindCSS: { Icon: SiTailwindcss, className: "text-cyan-300" },
-  Bootstrap: { Icon: BsFillBootstrapFill, className: "text-purple-500" },
-  "C++": { Icon: SiCplusplus, className: "text-blue-500" },
-  CSS: { Icon: SiCss3, className: "text-blue-500" },
-  C: { Icon: SiC, className: "text-sky-400" },
-  Python: { Icon: SiPython, className: "text-yellow-300" },
-  Solidity: { Icon: SiSolidity, className: "text-stone-500" },
-  HTML: { Icon: SiHtml5, className: "text-orange-600" },
 };
 
 export const BACKEND_STACKS = {
-  postgreSql: { Icon: BiLogoPostgresql, className: "text-blue-500" },
-  Prisma: { Icon: SiPrisma, className: "text-emerald-500" },
   "Node.js": { Icon: SiNodedotjs, className: "text-green-600" },
-  Firebase: { Icon: SiFirebase, className: "text-yellow-500" },
-  "Artificial Intelligence": { Icon: BsRobot, className: "text-rose-500" },
-  Nginx: { Icon: SiNginx, className: "text-green-500" },
   Express: { Icon: SiExpress, className: "" },
-  TensorFlow: { Icon: SiTensorflow, className: "text-orange-600" },
-  Keras: { Icon: SiKeras, className: "text-red-600" },
-  Bun: { Icon: SiBun, className: "text-yellow-50" },
-  Flask: { Icon: SiFlask, className: "text-neutral-200" },
-  "Arch Linux": { Icon: SiArchlinux, className: "text-sky-400" },
+  Java: { Icon: FaJava, className: "text-red-500" },
+  "Springboot": { Icon: SiSpringboot, className: "text-green-500" }, // Spring framework uses the Java logo for representation
+  Hibernate: { Icon: SiHibernate, className: "text-emerald-600" },
+  JPA: { Icon: FaJava, className: "text-orange-600" },
+  JUnit: { Icon: FaJava, className: "text-yellow-300" },
+  Maven: { Icon: SiApachemaven, className: "text-blue-500" },
+  Docker: { Icon: DiDocker, className: "text-purple-500" },
+  AWS: { Icon: FaAws, className: "text-purple-500" },
+  Prisma: { Icon: SiPrisma, className: "text-emerald-500" },
+  postgreSql: { Icon: BiLogoPostgresql, className: "text-blue-500" },
   MongoDB: { Icon: SiMongodb, className: "text-green-400" },
 };
